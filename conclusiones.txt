@@ -12,9 +12,8 @@ Hallazgos
 - Se corrigio el texto "finaliza la compracompra" del feature, que no coincidia
   con el paso definido y antes impedia completar el escenario.
 - Una ejecucion anterior mostro el carrito vacio y fallo en su validacion.
-  La ejecucion posterior paso; no se determino la causa del fallo anterior.
-- Selenium mostro una advertencia de compatibilidad CDP con la version de
-  Chrome utilizada. La advertencia no impidio la ejecucion satisfactoria, pero
+  La ejecucion posterior paso; se demora en mostrar los productos en el carro y por esto fallo.
+- Selenium mostro una advertencia de compatibilidad
   conviene mantener compatibles las versiones de Chrome y Selenium.
 - La validacion del mensaje elimina un signo de exclamacion final y normaliza
   las mayusculas; por tanto, no verifica esos aspectos exactos del texto.

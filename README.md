@@ -34,6 +34,14 @@ Para ejecutar sin mostrar el navegador:
 .\gradlew.bat "-Dheadless.mode=true" clean test --tests com.saucedemo.runners.PurchaseRunner --no-daemon
 ```
 
+Para ejecutar solo los escenarios con el tag `@compra_exitosa`:
+
+```powershell
+.\gradlew.bat "-Dcucumber.filter.tags=@compra_exitosa" clean test --tests com.saucedemo.runners.PurchaseRunner --no-daemon
+```
+
+Puedes reemplazar `@compra_exitosa` por otro tag incluido en los features seleccionados por el runner. Para ejecutarlo sin mostrar el navegador, agrega `"-Dheadless.mode=true"` al comando.
+
 El reporte de Serenity se genera en `target/site/serenity/index.html`. El mensaje real de Sauce Demo incluye un signo de exclamacion y puede mostrarse con otra capitalizacion; la validacion compara el texto sin ese signo final y sin distinguir mayusculas.
 
 Consulta `readme.txt` para las instrucciones completas, `conclusiones.txt` para los hallazgos y `reportes/resultado.txt` para el resumen de la ejecucion registrada.

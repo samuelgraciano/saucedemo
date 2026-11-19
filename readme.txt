@@ -5,9 +5,9 @@ Screenplay y Cucumber. El escenario inicia sesion, agrega dos productos,
 verifica el carrito, completa el formulario y valida la confirmacion.
 
 Requisitos
-1. Instalar JDK 17 o superior y configurar JAVA_HOME. Verificar con:
+1. Instalar JDK 17 o superior Verificar con:
    java -version
-2. Instalar Google Chrome y tener acceso a Internet. La primera ejecucion
+2. Instalar Google Chrome. La primera ejecucion
    descarga Gradle, dependencias y, si es necesario, el controlador de Chrome.
 3. Instalar Git.
 
@@ -22,6 +22,9 @@ Ejecucion en Windows
    .\gradlew.bat clean test --tests com.saucedemo.runners.PurchaseRunner --no-daemon
 5. Para ejecutarlo sin mostrar el navegador:
    .\gradlew.bat "-Dheadless.mode=true" clean test --tests com.saucedemo.runners.PurchaseRunner --no-daemon
+   Para ejecutar solo el tag @compra_exitosa:
+   .\gradlew.bat "-Dcucumber.filter.tags=@compra_exitosa" clean test --tests com.saucedemo.runners.PurchaseRunner --no-daemon
+   Cambiar el tag por otro presente en los features seleccionados por el runner.
 6. Abrir target\site\serenity\index.html para consultar el reporte Serenity.
    El reporte de Gradle se encuentra en build\reports\tests\test\index.html.
    Cada ejecucion clean regenera estos archivos.
