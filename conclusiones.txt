@@ -1,0 +1,28 @@
+HALLAZGOS Y CONCLUSIONES
+
+Alcance
+Se automatizo un escenario de compra exitosa en https://www.saucedemo.com/:
+inicio de sesion, adicion de dos productos, validacion del carrito, formulario
+de compra, finalizacion y verificacion del mensaje de confirmacion.
+
+Hallazgos
+- La ejecucion del 19 de noviembre de 2026 en Windows con Chrome sin interfaz
+  completo el escenario satisfactoriamente. El detalle esta en
+  reportes\resultado.txt.
+- Se corrigio el texto "finaliza la compracompra" del feature, que no coincidia
+  con el paso definido y antes impedia completar el escenario.
+- Una ejecucion anterior mostro el carrito vacio y fallo en su validacion.
+  La ejecucion posterior paso; no se determino la causa del fallo anterior.
+- Selenium mostro una advertencia de compatibilidad CDP con la version de
+  Chrome utilizada. La advertencia no impidio la ejecucion satisfactoria, pero
+  conviene mantener compatibles las versiones de Chrome y Selenium.
+- La validacion del mensaje elimina un signo de exclamacion final y normaliza
+  las mayusculas; por tanto, no verifica esos aspectos exactos del texto.
+
+Conclusiones
+El flujo de compra cubierto pudo reproducirse y finalizar correctamente en la
+ejecucion registrada. El resultado corresponde a un unico escenario y no
+demuestra la ausencia de defectos en otros usuarios, productos o caminos de
+error. Las credenciales de demostracion estan separadas del feature en
+settings.json; para sistemas reales se debe utilizar un gestor de secretos o
+variables de entorno y evitar publicar contrasenas.

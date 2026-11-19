@@ -1,0 +1,21 @@
+REPORTE RESUMIDO DE EJECUCION
+
+Fecha: 19 de noviembre de 2026
+Sistema: Windows
+Navegador: Chrome 157.0.8103.79, modo headless
+Herramientas: Gradle wrapper, Serenity BDD, Cucumber y Selenium.
+Comando:
+.\gradlew.bat "-Dheadless.mode=true" clean test --tests com.saucedemo.runners.PurchaseRunner --no-daemon
+
+Escenario: Compra exitosa de dos productos
+Resultado: APROBADO (1 escenario, 0 fallos)
+Pasos ejecutados: inicio de sesion, adicion de dos productos, apertura y
+validacion del carrito, formulario de compra, finalizacion y confirmacion.
+Resultado de Gradle: BUILD SUCCESSFUL.
+
+Advertencia observada: Selenium no encontro una implementacion CDP coincidente
+con Chrome 157. La advertencia no impidio que este escenario terminara.
+
+Este archivo resume la ejecucion indicada. Para generar el reporte detallado
+actualizado, ejecutar el comando anterior y abrir:
+target\site\serenity\index.html
